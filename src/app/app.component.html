@@ -1,0 +1,12 @@
+<select (change)="onChange($event)">
+  <option value="" [selected]=true [disabled]="true">Select Country</option>
+  <option *ngFor="let countryname of country">
+    <span>{{countryname.country}}</span>
+  </option>
+</select>
+<p>
+  <input [(ngModel)]="code" id='countryCode' value="{{code}}" disabled/>
+  <input [(ngModel)]="mobileNumber" id='mobileNumber' placeholder='Enter Mobile Number'/>
+
+</p>
+<button [disabled]="!code || !mobileNumber" (click)="consoleNumber()">Get Mobile Number</button>
