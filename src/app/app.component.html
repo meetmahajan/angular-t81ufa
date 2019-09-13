@@ -1,3 +1,12 @@
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
 <select (change)="onChange($event)">
   <option value="" [selected]=true [disabled]="true">Select Country</option>
   <option *ngFor="let countryname of country">
@@ -9,4 +18,4 @@
   <input [(ngModel)]="mobileNumber" id='mobileNumber' placeholder='Enter Mobile Number'/>
 
 </p>
-<button [disabled]="!code || !mobileNumber" (click)="consoleNumber()">Get Mobile Number</button>
+<button class="btn btn-primary" [disabled]="!code || !mobileNumber" (click)="consoleNumber()">Get Mobile Number</button>
